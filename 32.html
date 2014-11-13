@@ -1,0 +1,20 @@
+<script>
+/*
+Write a function Minmax(X, I, J) that writes the minimal value of items XI and XJ of a list X to the item XI and writes the maximal value of these items to the item XJ (I and J are input integer parameters, the function returns the None value). Using four calls of this function, find the minimal value and the maximal value among four given real numbers.
+*/
+function Minmax(X, I, J) {
+  var min, max;
+	if (X[I] < X[J]) {
+    min = X[I];
+    max = X[J];
+  } else {
+    min = X[J];
+    max = X[I];
+  }
+  X[I] = min;
+  X[J] = max;
+}
+var list = [34, 32, 2, 66, 77];
+Minmax(list, 1, 2);
+console.log(list);
+</script>
