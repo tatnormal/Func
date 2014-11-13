@@ -1,0 +1,15 @@
+<script>
+/* 
+Write a real-valued function CircleS(R) that returns the area of a circle of radius R (R is a real number). Using this function, find the areas of three circles of given radiuses. Note that the area of a circle of radius R can be found by formula S = p·R2. Use 3.14 for a value of p.
+*/
+function Circles(R)
+{
+	return Math.PI * R * R;
+}
+var raza = prompt("Introdu raza cercului si tasteaza [Enter]");
+alert("Aria cercului cu raza " + raza + " este " + Circles(raza) + "\n" + "\n" + "Tasteaza [Enter], apoi [F5] pentru a recalcula");
+console.log(Circles(5));
+console.log(Circles(6));
+console.log(Circles(7));
+
+</script>

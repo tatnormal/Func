@@ -1,0 +1,16 @@
+<script>
+/*
+Write a real-valued function RingS(R1, R2) that returns the area of a ring bounded by a concentric circles of radiuses R1 and R2 (R1 and R2 are real numbers, R1 > R2). Using this function, find the areas of three rings with given outer and inner radiuses. Note that the area of a circle of radius R can be found by formula S = p·R2. Use 3.14 for a value of p.
+*/
+function RingS(R1, R2)
+{
+	var x = Math.PI * R1 * R1;
+	var y = Math.PI * R2 * R2;
+	var z = x - y;
+	return z; 
+}
+
+console.log(RingS(5, 4));
+console.log(RingS(7, 6));
+console.log(RingS(9, 8));
+</script>

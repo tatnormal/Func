@@ -1,0 +1,20 @@
+<script>
+/*
+Write a real-valued function Atan1(x, e) (x and e are real numbers, |x| < 1, e > 0) that returns an approximate value of the function atan(x) defined as follows:
+atan(x) = x - x3/3 + x5/5 - … + (-1)n·x2·n+1/(2·n+1) + … .
+Stop adding new terms to the sum when the absolute value of the next term will be less than e. Using this function, find the approximate values of the function atan(x) at a given point x for six given e.
+*/
+function Atan1(x, e) {
+	var atan = x,
+	    n = 1,
+	    step = x;
+	while (Math.abs(step / (2*n+1)) > e) {
+	    step *= -1*x*x;
+	    atan += step / (2*n+1);
+	    n++;
+	    }
+	return atan;	
+}
+
+console.log(Atan1(0.5, 0.1));
+</script>

@@ -1,0 +1,23 @@
+<script>
+/*
+Write a real-valued function Leng(xA, yA, xB, yB) that returns the length of a segment AB with given coordinates of its endpoints:
+|AB| = ((xA - xB)2 + (yA - yB)2)1/2
+(xA, yA, xB, yB are real-valued parameters). Using this function, find the lengths of segments AB, AC, AD provided that coordinates of points A, B, C, D are given.
+*/
+function Leng(Xa, Ya, Xb, Yb) {
+	return Math.sqrt(Math.pow(Xa-Xb,2)+Math.pow(Ya-Yb,2));
+	
+}
+var Ax = -2,
+    Ay = 2,
+    Bx = 2,
+    By = -2,
+    Cx = -3,
+    Cy = 4,
+    Dx = 2,
+    Dy = 5;
+
+console.log(Leng(Ax,Ay, Bx, By));
+console.log(Leng(Ax,Ay, Cx, Cy));
+console.log(Leng(Ax,Ay, Dx, Dy));
+</script>

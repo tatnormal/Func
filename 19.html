@@ -1,0 +1,15 @@
+<script>
+/*
+Write a real-valued function Fact(N) that returns a factorial of a positive integer N: N! = 1·2·…·N (the real return type allows to avoid the integer overflow during the calculation of the factorials for large values of the parameter N). Using this function, find the factorials of five given integers.
+*/
+function Fact(N) {
+	var f = 1;
+	for (var i = 1; i <= N; i++) {
+	f *= i;
+	}
+	return f;	
+}
+var list = [3, 5 , 6, 7, 8];
+for (var i = 0; i < list.length; i++)
+console.log(Fact(list[i]));
+</script>

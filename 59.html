@@ -1,0 +1,34 @@
+<script>
+/*
+Using the Leng and Area functions from the tasks Func56 and Func58, write a real-valued function Dist(xP, yP, xA, yA, xB, yB) that returns the distance D(P, AB) between a point P and a line AB:
+D(P, AB) = 2·SPAB/|AB|,
+where SPAB is the area of the triangle PAB. Using this function, find the distance between a point P and each of lines AB, AC, BC provided that coordinates of points P, A, B, C are given.
+*/
+function Leng(Xa, Ya, Xb, Yb) {
+	return Math.sqrt(Math.pow(Xa-Xb,2)+Math.pow(Ya-Yb,2));
+}
+
+function Perim(Xa, Ya, Xb, Yb, Xc, Yc) {
+	return Leng(Xa,Ya,Xb,Yb) + Leng(Xb,Yb,Xc,Yc) + Leng(Xa,Ya,Xc,Yc); }
+
+function Area(Xa, Ya, Xb, Yb, Xc, Yc) {
+var p = Perim(Xa, Ya, Xb, Yb, Xc, Yc);
+return Math.sqrt(p*(p-Leng(Xa,Ya,Xb,Yb))*(p-Leng(Xb,Yb,Xc,Yc))*(p-Leng(Xa,Ya,Xc,Yc)));	
+}
+
+function Dist(Xp, Yp, Xa, Ya, Xb, Yb) {
+	return 2*Area(Xp, Yp, Xa, Ya, Xb, Yb)/Leng(Xa, Ya, Xb, Yb);
+}
+var Ax = -2,
+    Ay = 2,
+    Bx = 2,
+    By = -2,
+    Cx = -3,
+    Cy = 4,
+    Px = 2,
+    Py = 5;
+
+console.log(Dist(Px,Py,Ax,Ay,Bx,By));
+console.log(Dist(Px,Py,Ax,Ay,Cx,Cy));
+console.log(Dist(Px,Py,Bx,By,Cx,Cy));
+</script>

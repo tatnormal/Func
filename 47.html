@@ -1,0 +1,17 @@
+<script>
+/*
+Using the GCD2 function from the task Func46, write a procedure Frac1(a, b, p, q), that simplifies a fraction a/b to the irreducible form p/q (a and b are input integer parameters, p and q are output integer parameters). The sign of a resulting fraction p/q is assigned to its numerator, so q > 0. Using this procedure, find the numerator and the denominator for each of irreducible fractions a/b + c/d, a/b + e/f, a/b + g/h provided that integers a, b, c, d, e, f, g, h are given.
+*/
+function GCD(A, B) {
+	if (B == 0) { return A; }
+	return GCD(B, A % B);	
+}
+
+function Frac1(n1, n2) {
+	var numerator = n1 / GCD(n1, n2);
+	var denumerator = n2 / GCD(n1, n2);
+	return numerator + "/" + denumerator;
+}
+
+console.log(Frac1(18, 12));
+</script>

@@ -1,0 +1,14 @@
+<script>
+/*
+ Write a logical function IsPower5(K) that returns True, if an positive integer parameter K is equal to 5 raised to some integer power, and False otherwise. Using this function, find the amount of powers of base 5 in a given sequence of 10 positive integers.
+*/
+function IsPower5(K) {
+	var p = 1; 
+	while (p < K) {
+	p *= 5;
+	}
+	return K == p;
+}
+var numere = [1, 5, 25, 36, 52, 78, 125, 225, 333, 625];
+console.log(numere.filter(IsPower5)); 
+</script>

@@ -1,0 +1,41 @@
+<script>
+/*
+Using the Dist function from the task Func59, write a function Alts(xA, yA, xB, yB, xC, yC) that evaluates and returns the altitudes hA, hB, hC drawn from the vertices A, B, C of a triangle ABC (the coordinates of vertices are input real-valued parameters). Using this function, evaluate the altitudes of each of triangles ABC, ABD, ACD provided that the coordinates of points A, B, C, D are given.
+*/
+function Leng(Xa, Ya, Xb, Yb) {
+	return Math.sqrt(Math.pow(Xa-Xb,2)+Math.pow(Ya-Yb,2));
+}
+
+function Perim(Xa, Ya, Xb, Yb, Xc, Yc) {
+	return Leng(Xa,Ya,Xb,Yb) + Leng(Xb,Yb,Xc,Yc) + Leng(Xa,Ya,Xc,Yc); }
+
+function Area(Xa, Ya, Xb, Yb, Xc, Yc) {
+var p = Perim(Xa, Ya, Xb, Yb, Xc, Yc);
+return Math.sqrt(p*(p-Leng(Xa,Ya,Xb,Yb))*(p-Leng(Xb,Yb,Xc,Yc))*(p-Leng(Xa,Ya,Xc,Yc)));	
+}
+
+function Dist(Xp, Yp, Xa, Ya, Xb, Yb) {
+	return 2*Area(Xp, Yp, Xa, Ya, Xb, Yb)/Leng(Xa, Ya, Xb, Yb);
+}
+
+
+function Alts(Xa, Ya, Xb, Yb, Xc, Yc) {
+	var Ha = Dist(Xa, Ya, Xb, Yb, Xc, Yc);
+	var Hb = Dist(Xb, Yb, Xa, Ya, Xc, Yc);
+	var Hc = Dist(Xc, Yc, Xa, Ya, Xb, Yb);
+	return [Ha, Hb, Hc];
+	
+}
+var Ax = -2,
+    Ay = 2,
+    Bx = 2,
+    By = -2,
+    Cx = -3,
+    Cy = 4,
+    Dx = 2,
+    Dy = 5;
+
+console.log(Alts(Ax,Ay,Bx,By,Cx,Cy));
+console.log(Alts(Ax,Ay,Bx,By,Dx,Dy));
+console.log(Alts(Ax,Ay,Cx,Cy,Dx,Dy));
+</script>

@@ -1,0 +1,22 @@
+<script>
+/*
+Write a function InvDigits(K) that inverts the order of digits of a positive integer K and returns the obtained integer (K is an input parameter). Using this function, invert the order of digits for each of five given integers.
+*/
+function InvDigits(K) {
+var str = K.toString();
+var a = 0;
+a *= 10; 
+a += K % 10; 
+var b = Math.floor(K / 10); 
+	for (var i = 1; i < str.length; i++) {
+a *= 10; 
+a += b % 10; 
+b = Math.floor(b / 10);
+}
+
+return a;
+}
+var list = [745402, 34535, 23, 2343, 24323];
+for (var i = 0; i < list.length; i++)
+console.log(InvDigits(list[i]));
+</script>

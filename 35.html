@@ -1,0 +1,14 @@
+<script>
+/*
+Write a function ShiftRight3(X) that performs a right cyclic shift of a list X of three real-valued items: the value ot each item should be assigned to the next item and the value of the last item should be assigned to the first item (the function returns the None value). Using this function, perform the right cyclic shift for each of two given lists X and Y.
+*/
+function ShiftRight3(X) {
+	var result = X.pop();
+	X.unshift(result);
+	return X;
+}
+var list = [34, 32, 2, 66, 77, 43];
+var list2 = [34, 32, 12, 1, 43, 54];
+console.log(ShiftRight3(list));
+console.log(ShiftRight3(list2));
+</script>

@@ -1,0 +1,12 @@
+<script>
+/*
+Write a function PowerA234(A) that computes the second, the third, and the fourth degrees of a real number A and returns these degrees as three real numbers (A is an input parameter). Using this function, find the second, the third, and the fourth degrees of five given real numbers.
+*/
+function PowerA234(A) {
+	return [Math.pow(A,2), Math.pow(A,3), Math.pow(A,4)];
+		
+}
+var list = [1, 3, 4, 5, 8];
+for (var i = 0; i < list.length; i++)
+console.log(PowerA234(list[i]));
+</script>

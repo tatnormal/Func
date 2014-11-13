@@ -1,0 +1,26 @@
+<script>
+/*
+ Write a logical function IsPowerN(K, N) that returns True, if an positive integer parameter K is equal to N (> 1) raised to some integer power, and False otherwise. Having input an integer N (> 1) and a sequence of 10 positive integers and using this function, find the amount of powers of base N in the given sequence.
+*/
+function IsPowerN(K, N) {
+	var p = 1;
+	while (p < K) {
+	p *= N; 
+	}
+	return p == K;
+}
+
+var numere = [4, 5, 8, 16, 52, 64, 125, 225, 256, 625];
+var N = 2;
+
+var numerePutere = [];
+
+for (var i=0; i<numere.length; i++) {
+  if (IsPowerN(numere[i], N)) {
+    numerePutere.push(numere[i]);
+  }
+}
+
+console.log(numerePutere);
+	
+</script>

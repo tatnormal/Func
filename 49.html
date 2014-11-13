@@ -1,0 +1,16 @@
+<script>
+/*
+Taking into account the formula GCD(A, B, C) = GCD(GCD(A, B), C) and using the GCD2 function from the task Func46, write an integer function GCD3(A, B, C) that returns the greatest common divisor of three positive integers A, B, C. Using this function, find the greatest common divisor for each of triples (A, B, C), (A, C, D), (B, C, D) provided that integers A, B, C, D are given.
+*/
+function GCD(A, B) {
+	if (B == 0) { return A; }
+	return GCD(B, A % B);	
+}
+
+function GCD3(A, B, C) {
+	return GCD(GCD(A, B), C);
+	
+}
+
+console.log(GCD3(24, 18, 12));
+</script>

@@ -1,0 +1,18 @@
+<script>
+  /*
+   Write a logical function IsPrime(N) that returns True, if an integer parameter N (> 1) is a prime number, and False otherwise. Using this function, find the amount of prime numbers in a given sequence of 10 integers greater than 1. Note that an integer (> 1) is called a prime number if it has not positive divisors except 1 and itself.
+   */
+  function IsPrime(n) {
+    if (n == 2) { return true;}
+
+    for (var i = 2; i < n; i++)
+      if (n % i == 0) { return false;}
+
+    return true;
+  }
+
+  var numere = [2, 3, 9, 14, 17, 22, 23, 42, 43, 70];
+
+  console.log(numere.filter(IsPrime));
+
+</script>

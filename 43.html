@@ -1,0 +1,20 @@
+<script>
+/*
+Write a real-valued function Ln1(x, e) (x and e are real numbers, |x| < 1, e > 0) that returns an approximate value of the function ln(1 + x) defined as follows:
+ln(1 + x) = x - x2/2 + x3/3 - … + (-1)n·xn+1/(n+1) + … .
+Stop adding new terms to the sum when the absolute value of the next term will be less than e. Using this function, find the approximate values of the function ln(1 + x) at a given point x for six given e.
+*/
+function Ln1(x, e) {
+	var ln = x ,
+	    n = 1 ,
+	    step = x;
+	while (Math.abs(step / (n + 1)) > e) {
+	    step *= -1 * x;
+	    ln += step / (n + 1);
+	    n++;
+	    }
+	return ln;	
+}
+
+console.log(Ln1(0.5, 0.1));
+</script>

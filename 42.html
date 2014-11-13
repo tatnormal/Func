@@ -1,0 +1,22 @@
+<script>
+/*
+Write a real-valued function Cos1(x, e) (x and e are real numbers, e > 0) that returns an approximate value of the function cos(x) defined as follows:
+cos(x) = 1 - x2/(2!) + x4/(4!) - … + (-1)n·x2·n/((2·n)!) + … .
+Stop adding new terms to the sum when the absolute value of the next term will be less than e. Using this function, find the approximate values of the function cos(x) at a given point x for six given e.
+*/
+function Cos1(x, e) {
+	var cos = 1,
+	    n = 1,
+	    step = 1,
+	    fact = 1;
+	while (Math.abs(step / fact) > e) {
+	    step *= -1 * x * x;
+	    fact *= (2*n-1)*(2*n);
+	    cos += step / fact;
+ 	    n++;
+	    }
+	return cos;	
+}
+
+console.log(Cos1(10, 0.3));
+</script>

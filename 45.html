@@ -1,0 +1,23 @@
+<script>
+/*
+Write a real-valued function Power4(x, a, e) (x, a, e are real numbers, |x| < 1, a, e > 0) that returns an approximate value of the function (1 + x)a defined as:
+(1 + x)a = 1 + a·x + a·(a-1)·x2/(2!) + … + a·(a-1)·…·(a-n+1)·xn/(n!) + … .
+Stop adding new terms to the sum when the absolute value of the next term will be less than e. Using this function, find the approximate values of the function (1 + x)a at a given point x for a given exponent a and six given e.
+*/
+function Power4(x, a, e) {
+	var sum = 1 + a*x,
+	    n = 2,
+	    step = x,
+	    fact = 1,
+	    astep = a;
+	while (Math.abs(astep * step / fact) > e) {
+	    astep *= (a-n+1);
+	    step *= x;
+	    fact *= n;
+	    sum += astep * step / fact;
+	    }
+	return sum;	
+}
+
+console.log(Power4(0.5, 3, 0.1));
+</script>

@@ -1,0 +1,54 @@
+<script>
+/*
+Using the MonthDays function from the task Func53, write a function PrevDate(D, M, Y) that changes a correct date, represented at the "day D, month number M, year Y" format, to a previous one and returns new values of day, month, and year (all numbers are integers). Apply this function to three given dates and output resulting previous ones.
+*/
+function IsLeapYear(Y) {
+	return ((Y % 4 == 0) && (Y % 100 != 0)) || (Y % 400 == 0);
+}
+
+function MonthDays(M, Y) {
+	var days;
+	switch (M) {
+	case 1: days = 31;
+		break;
+	case 2: if (IsLeapYear(Y)) {days=29;} else {days=28;};
+		break;
+	case 3: days = 31;
+		break;
+	case 4: days = 30;
+		break;
+	case 5: days = 31;
+		break;
+	case 6: days = 30;
+		break;
+	case 7: days = 31;
+		break;
+	case 8: days = 31;
+		break;
+	case 9: days = 30;
+		break;
+	case 10: days = 31;
+		break;
+	case 11: days = 30;
+		break;
+	case 12: days = 31;
+		break;
+	}
+	return days;
+	
+}
+
+function PrevDate(D, M, Y) {
+	if (D > 1) { D=D-1;}
+	else if (M > 1) {M=M-1; D=MonthDays(M, Y);}
+	else {M=12; D=31; Y=Y-1;}
+	return D + "." + M + "." + Y;
+	
+}
+
+console.log(PrevDate(1, 1, 2014));
+console.log(PrevDate(1, 2, 2014));
+console.log(PrevDate(2, 2, 2014));
+console.log(PrevDate(1, 3, 2012));
+console.log(PrevDate(1, 3, 2013));
+</script>

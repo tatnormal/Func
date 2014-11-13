@@ -1,0 +1,22 @@
+<script>
+/*
+Write a real-valued function Sin1(x, e) (x and e are real numbers, e >  0) that returns an approximate value of the function sin(x) defined as  follows:
+sin(x) = x - x3/(3!) + x5/(5!) - … + (-1)n·x2·n+1/((2·n+1)!) + … .
+Stop adding new terms to the sum when the absolute value of the next  term will be less than e. Using this function, find the approximate  values of the function sin(x) at a given point x for six given e.
+*/
+ function Sin1(x, e) {
+	var sin = x,
+	    n = 1,
+	    step = x,
+	    fact = 1;
+	while (Math.abs(step / fact) > e) {
+	    step *= -1*x*x;
+	    fact *= (2*n) * (2*n+1);
+	    sin += step / fact;
+	    n++;
+	    }	
+	return sin;	
+ }
+
+ console.log(Sin1(6, 0.3));
+</script>

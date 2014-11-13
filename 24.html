@@ -1,0 +1,18 @@
+<script>
+/*
+Write a function Mean(X, Y) that computes the arithmetical mean (X+Y)/2 and the geometrical mean (X·Y)1/2 of two positive real numbers X and Y and returns the result as two real numbers (X and Y are input parameters). Using this function, find the arithmetical mean and the geometrical mean of pairs (A, B), (A, C), (A, D) provided that real numbers A, B, C, D are given.
+*/
+function Mean(X, Y) {
+	var arith = (X+Y)/2;
+	var geom = Math.sqrt(X*Y);
+	return [arith, geom];
+		
+}
+var A = 2;
+var B = 18;
+var C = 32;
+var D = 50;
+console.log(Mean(A, B));
+console.log(Mean(A, C));
+console.log(Mean(A, D));
+</script>

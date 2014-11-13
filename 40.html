@@ -1,0 +1,23 @@
+<script>
+/*
+Write a real-valued function Exp1(x, e) (x and e are real numbers, e > 0) that returns an approximate value of the function exp(x) defined as follows:
+exp(x) = 1 + x + x2/(2!) + x3/(3!) + … + xn/(n!) + …
+(n! = 1·2·…·n). Stop adding new terms to the sum when the value of the next term will be less than e. Using this function, find the approximate values of the function exp(x) at a given point x for six given e.
+*/
+  function Exp1(x, e) {
+    var exp = 1, 
+        step = 1, 
+        n = 1, 
+        f = 1; 
+    while (step / f > e) {
+	step = step * x;
+	f = f * n;
+	exp = exp + step / f;
+	n = n + 1;
+	}
+    return exp;
+  }
+  console.log(Exp1(6, 0.9));
+  console.log(Exp1(6, 0.5));
+  console.log(Exp1(6, 0.2));
+</script>

@@ -1,0 +1,10 @@
+<script>
+/*
+ Write a logical function IsSquare(K) that returns True, if an positive integer parameter K is a square of some integer, and False otherwise. Using this function, find the amount of squares in a given sequence of 10 positive integers.
+*/
+function IsSquare(K) {
+	return Math.sqrt(K) % 1 == 0;
+	}
+var numere = [1, 4, 6, 9, 16, 21, 36, 42, 49, 51];
+console.log(numere.filter(IsSquare));
+</script>

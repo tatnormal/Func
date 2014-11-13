@@ -1,0 +1,15 @@
+<script>
+/*
+Write a logical function IsPalindrome(K) that returns True, if the decimal representation of a positive parameter K is a palindrome (i. e., it is read equally both from left to right and from right to left), and False otherwise. Using this function, find the amount of palindromes in a given sequence of 10 positive integers.
+*/
+function IsPalindrome(K) {
+	var num = K.toString();
+	for (var i = 0; i < num.length; i++) {
+		if (num.charAt(i) != num.charAt(num.length-1-i)) {
+		return false; }
+	}
+	return true;
+}
+var list = [1234321, 43422, 789987, 67393, 8484];
+console.log(list.filter(IsPalindrome));
+</script>

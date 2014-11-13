@@ -1,0 +1,16 @@
+<script>
+/*
+Write a real-valued function Power1(A, B) that returns the power AB calculated by the formula AB = exp(B·ln(A)) (A and B are real-valued parameters). In the case of zero-valued or negative parameter A the function returns 0. Having input real numbers P, A, B, C and using this function, find the powers AP, BP, CP.
+*/
+function Power1(A, B) {
+	if (A < 0) { return 0; }
+	return Math.exp(B * Math.log(A));
+}
+var A = 2,
+    B = 3,
+    C = 4,
+    P = 2;
+console.log(Power1(A, P));
+console.log(Power1(B, P));
+console.log(Power1(C, P));
+</script>

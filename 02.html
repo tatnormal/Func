@@ -1,0 +1,35 @@
+<script>
+/*
+Write an integer function RootCount(A, B, C) that returns the amount of roots of the quadratic equation A·x2 + B·x + C = 0 (A, B, C are real-valued parameters, A ? 0). Using this function, find the amount of roots for each of three quadratic equations with given coefficients. Note that the amount of roots is determined by the value of a discriminant: D = B2 - 4·A·C.
+*/
+function RootCount(A, B, C)
+{
+	if (Math.pow(B,2)-4*A*C > 0) {
+		return 2;
+	}
+	else if (Math.pow(B,2)-4*A*C == 0) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
+var a = prompt("Introdu coeficientul A si tasteaza [Enter]");
+var b = prompt("Introdu coeficientul B si tasteaza [Enter]");
+var c = prompt("Introdu coeficientul C si tasteaza [Enter]");
+var x = parseInt(a);
+var y = parseInt(b);
+var z = parseInt(c);
+var val = RootCount(x, y, z);
+if (val == 2) {
+	alert("Ecuatia are 2 radacini" + "\n" + "\n" + "Tasteaza [Enter], apoi [F5] pentru a recalcula");
+	} else if (val == 1) {
+	alert("Ecuatia are 1 radacina" + "\n" + "\n" + "Tasteaza [Enter], apoi [F5] pentru a recalcula");
+	} else {
+	alert("Ecuatia nu are radacini" + "\n" + "\n" + "Tasteaza [Enter], apoi [F5] pentru a recalcula");
+	}
+
+console.log(RootCount(-3, -2, 4));
+console.log(RootCount(3, -2, 4));
+console.log(RootCount(1, -4, 4));
+</script>

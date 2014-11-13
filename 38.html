@@ -1,0 +1,20 @@
+<script>
+/*
+Write a real-valued function Power2(A, N) that returns the power AN calculated by the following formulas:
+A0 = 1;
+AN = A·A·…·A    (N factors),    if N > 0;
+AN = 1/(A·A·…·A)    (|N| factors),    if N < 0
+(A is a real-valued parameter, N is an integer parameter). Having input a real number A and integers K, L, M and using this function, find the powers AK, AL, AM.
+*/
+function Power2(A, N) {
+	if ( N == 0 ) { return 1; 
+	} else { return Math.pow(A, N); }
+}
+var A = 3,
+    K = 2,
+    L = -2,
+    M = 0;
+console.log(Power2(A, K));
+console.log(Power2(A, L));
+console.log(Power2(A, M));
+</script>

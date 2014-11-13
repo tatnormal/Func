@@ -1,0 +1,14 @@
+<script>
+/*
+Write a function TimeToHMS(T) that converts a time interval T (in seconds) into the "hours H, minutes M, seconds S" format and returns the values H, M, S (T, H, M, S are integers). Using this function, find the amount of hours, minutes and seconds for each of five given time intervals T1, T2, …, T5.
+*/
+function TimeToHMS(T) {
+	var H = Math.floor(T / 3600);
+	var M = Math.floor((T % 3600)/60);
+	var S = (T % 3600) % 60;
+	return H + "H " + M + "M " + S + "S";
+	
+}
+
+console.log(TimeToHMS(6087));
+</script>

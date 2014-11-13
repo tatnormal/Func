@@ -1,0 +1,23 @@
+<script>
+/*
+Write an integer function Sign(X) that returns the following value:
+-1,    if X < 0;        0,    if X = 0;        1,    if X > 0
+(X is a real-valued parameter).
+*/
+function Sign(X) {
+	if (X < -1) {
+		return -1;
+	}
+	else if (X > 1) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
+
+console.log(Sign(78));
+console.log(Sign(-78));
+console.log(Sign(0));
+
+</script>

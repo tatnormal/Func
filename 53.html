@@ -1,0 +1,42 @@
+<script>
+/*
+Using the IsLeapYear function from the task Func52, write an integer function MonthDays(M, Y) that returns the amount of days for M-th month of year Y (M and Y are integers, 1 = M = 12, Y > 0). Output the return value of this function for a given year Y and each of given months M1, M2, M3.
+*/
+function IsLeapYear(Y) {
+	return ((Y % 4 == 0) && (Y % 100 != 0)) || (Y % 400 == 0);
+}
+
+function MonthDays(M, Y) {
+	var days;
+	switch (M) {
+	case 1: days = 31;
+		break;
+	case 2: if (IsLeapYear(Y)) {days=29;} else {days=28;};
+		break;
+	case 3: days = 31;
+		break;
+	case 4: days = 30;
+		break;
+	case 5: days = 31;
+		break;
+	case 6: days = 30;
+		break;
+	case 7: days = 31;
+		break;
+	case 8: days = 31;
+		break;
+	case 9: days = 30;
+		break;
+	case 10: days = 31;
+		break;
+	case 11: days = 30;
+		break;
+	case 12: days = 31;
+		break;
+	}
+	return days;
+	
+}
+
+console.log(MonthDays(2, 2401));
+</script>

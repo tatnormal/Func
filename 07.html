@@ -1,0 +1,37 @@
+<script>
+/*
+Write a real-valued function Calc(A, B, Op) that performs an arithmetic operation over nonzero real numbers A and B and returns the result value. An arithmetic operation is determined by integer parameter Op as follows: 1 — subtraction, 2 — multiplication, 3 — division, and addition otherwise. Having input real numbers A, B and integers N1, N2, N3 and using this function, perform over given A, B three operations determined by given N1, N2, N3. Output the result value of each operation.
+*/
+function Calc(A, B, Op) {
+	if (Op == 1) {
+	return A - B;
+	} else if (Op == 2) {
+	return A * B; 
+	} else if (Op == 3) {
+	return A / B;
+	} else {
+	return A + B;
+	}
+}
+var a = prompt("Introdu numarul A si tasteaza [Enter]");
+var b = prompt("Introdu numarul B si tasteaza [Enter]");
+var c = prompt("Introdu parametrul Op si tasteaza [Enter]" + "\n" + "\n" +  "1 - scadere ;  2 - multiplicare ;  3 - impartire ;  4 - adunare");
+var x = parseInt(a);
+var y = parseInt(b);
+var z = parseInt(c);
+	if (z == 1) {
+	alert(x + " - " + y + " = " + Calc(x, y, z) + "\n" + "\n" + "Tasteaza [Enter], apoi [F5] pentru a recalcula");
+	} else if (z == 2) {
+	alert(x + " * " + y + " = " + Calc(x, y, z) + "\n" + "\n" + "Tasteaza [Enter], apoi [F5] pentru a recalcula");
+	} else if (z == 3) {
+	alert(x + " / " + y + " = " + Calc(x, y, z) + "\n" + "\n" + "Tasteaza [Enter], apoi [F5] pentru a recalcula");
+	} else { 
+	alert(x + " + " + y + " = " + Calc(x, y, z) + "\n" + "\n" + "Tasteaza [Enter], apoi [F5] pentru a recalcula");
+	}
+
+console.log(Calc(2, 4, 1));
+console.log(Calc(4, 2, 2));
+console.log(Calc(5, 6, 3));
+console.log(Calc(5, 6, 4));
+
+</script>

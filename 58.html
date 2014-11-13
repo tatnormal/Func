@@ -1,0 +1,31 @@
+<script>
+/*
+Using the Leng and Perim functions from the tasks Func56 and Func57, write a real-valued function Area(xA, yA, xB, yB, xC, yC) that returns the area of a triangle ABC:
+SABC = (p·(p-|AB|)·(p-|AC|)·(p-|BC|))1/2,
+where p is the half-perimeter. Using the Area function, find the areas of triangles ABC, ABD, ACD provided that coordinates of points A, B, C, D are given.
+*/
+function Leng(Xa, Ya, Xb, Yb) {
+	return Math.sqrt(Math.pow(Xa-Xb,2)+Math.pow(Ya-Yb,2));
+}
+
+function Perim(Xa, Ya, Xb, Yb, Xc, Yc) {
+	return Leng(Xa,Ya,Xb,Yb) + Leng(Xb,Yb,Xc,Yc) + Leng(Xa,Ya,Xc,Yc); }
+
+function Area(Xa, Ya, Xb, Yb, Xc, Yc) {
+var p = Perim(Xa, Ya, Xb, Yb, Xc, Yc);
+return Math.sqrt(p*(p-Leng(Xa,Ya,Xb,Yb))*(p-Leng(Xb,Yb,Xc,Yc))*(p-Leng(Xa,Ya,Xc,Yc)));
+	
+}
+var Ax = -2,
+    Ay = 2,
+    Bx = 2,
+    By = -2,
+    Cx = -3,
+    Cy = 4,
+    Dx = 2,
+    Dy = 5;
+
+console.log(Area(Ax,Ay,Bx,By,Cx,Cy));
+console.log(Area(Ax,Ay,Bx,By,Dx,Dy));
+console.log(Area(Ax,Ay,Cx,Cy,Dx,Dy));
+</script>

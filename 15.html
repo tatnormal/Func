@@ -1,0 +1,13 @@
+<script>
+/*
+Write an integer function DigitN(K, N) that returns the N-th digit in the decimal representation of a positive integer K provided that the digits are numbered from right to left. If the amount of digits is less than N then the function returns -1. Using this function, output sequentially 1st, 2nd, 3rd, 4th, 5th digit for each of five given positive integers K1, K2, …, K5.
+*/
+function DigitN(K, N) {
+	var num = K.toString();
+	if (num.length < N) {return -1;}
+	return num[num.length-N];
+}
+var list = [5435, 45454, 45, 454, 465464364];
+for (var i = 0; i < list.length; i++)
+console.log(DigitN(list[i], 3));
+</script>

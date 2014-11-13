@@ -1,0 +1,25 @@
+<script>
+/*
+Using the Leng function from the task Func56, write a real-valued function Perim(xA, yA, xB, yB, xC, yC) that returns the perimeter of a triangle ABC with given coordinates of its vertices (xA, yA, xB, yB, xC, yC are real-valued parameters). Using the Perim function, find the perimeters of triangles ABC, ABD, ACD provided that coordinates of points A, B, C, D are given.
+*/
+function Leng(Xa, Ya, Xb, Yb) {
+	return Math.sqrt(Math.pow(Xa-Xb,2)+Math.pow(Ya-Yb,2));
+}
+
+function Perim(Xa, Ya, Xb, Yb, Xc, Yc) {
+	return Leng(Xa,Ya,Xb,Yb) + Leng(Xb,Yb,Xc,Yc) + Leng(Xa,Ya,Xc,Yc); 
+	
+}
+var Ax = -2,
+    Ay = 2,
+    Bx = 2,
+    By = -2,
+    Cx = -3,
+    Cy = 4,
+    Dx = 2,
+    Dy = 5;
+
+console.log(Perim(Ax,Ay,Bx,By,Cx,Cy));
+console.log(Perim(Ax,Ay,Bx,By,Dx,Dy));
+console.log(Perim(Ax,Ay,Cx,Cy,Dx,Dy));
+</script>

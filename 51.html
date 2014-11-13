@@ -1,0 +1,15 @@
+<script>
+/*
+Write a function IncTime(H, M, S, T) that increases a time interval in hours H, minutes M, seconds S on T seconds and returns new values of hours, minutes, and seconds (all numbers are positive integers). Having input hours H, minutes M, seconds S (as integers) and an integer T and using the IncTime function, increase the given time interval on T seconds and output new values of H, M, S.
+*/
+function IncTime(H, M, S, T) {
+	var TT = H*3600 + M*60 + S + T;
+	var h = Math.floor(TT / 3600);
+	var m = Math.floor((TT % 3600)/60);
+	var s = (TT % 3600) % 60;
+	return h + "H " + m + "M " + s + "s"; 
+	
+}
+
+console.log(IncTime(1, 41, 27, 6087));
+</script>

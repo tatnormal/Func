@@ -1,0 +1,21 @@
+<script>
+/*
+Write a function DigitCS(K) that finds and returns the amount C of digits in the decimal representation of a positive integer K and also the sum S of its digits (K is an input integer parameter). Using this function, find the amount and the sum of digits for each of five given integers.
+*/
+function DigitCS(K) {
+	var str = K.toString();
+	var sum = 0; 
+	var a = K % 10;
+	var b = Math.floor(K / 10);
+	for ( var i = 0; i < str.length; i++) {
+	sum += a; 
+	a = b % 10; 
+	b = Math.floor(b / 10);
+	}
+		
+	return [str.length, sum];
+}
+var list = [745402, 34535, 23, 2343, 24323];
+for (var i = 0; i < list.length; i++)
+console.log(DigitCS(list[i]));
+</script>

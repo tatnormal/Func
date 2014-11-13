@@ -1,0 +1,13 @@
+<script>
+/*
+Write a function SortDec3(X) that sorts the list X of three real-valued items in descending order (the function returns the None value). Using this function, sort each of two given lists X and Y.
+*/
+function SortInc3(X) {
+	return X.sort(function(a, b) {return b-a;});
+	}
+	
+var X = [34, 32, 2, 66, 77, 43];
+var Y = [34, 32, 12, 1, 43, 54];
+console.log(SortInc3(X));
+console.log(SortInc3(Y));
+</script>
