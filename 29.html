@@ -5,9 +5,10 @@
 function AddRightDigit(D, K) {
 	return parseInt(K.toString() + D.toString());
 }
-var D1 = 4;
-var D2 = 5;
-console.log(AddRightDigit(D1, 3431));
-console.log(AddRightDigit(D2, AddRightDigit(D1, 3431)));
+var K = 3431,
+   D1 = 4,
+   D2 = 5;
+console.log(AddRightDigit(D1, K));
+console.log(AddRightDigit(D2, AddRightDigit(D1, K)));
 
 </script>

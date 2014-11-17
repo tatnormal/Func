@@ -2,12 +2,13 @@
 /*
 Write a function AddLeftDigit(D, K) that adds a digit D to the left side of the decimal representation of a positive integer K and returns the obtained number (D and K are input integer parameters, the value of D is in the range 0 to 9). Having input an integer K and two one-digit numbers D1, D2 and using two calls of this function, sequentially add the given digits D1, D2 to the left side of the given K and output the result of each adding.
 */
-function AddRightDigit(D, K) {
+function AddLeftDigit(D, K) {
 	return parseInt(D.toString() + K.toString());
 }
-var D1 = 4;
-var D2 = 5;
-console.log(parseInt(AddRightDigit(D1, 3431)));
-console.log(parseInt(AddRightDigit(D2, AddRightDigit(D1, 3431))));
+var K = 3431,
+   D1 = 4,
+   D2 = 5;
+console.log(AddLeftDigit(D1, K));
+console.log(AddLeftDigit(D2, AddLeftDigit(D1, K)));
 
 </script>
