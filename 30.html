@@ -5,9 +5,10 @@ Write a function AddLeftDigit(D, K) that adds a digit D to the left side of the 
 function AddLeftDigit(D, K) {
 	return parseInt(D.toString() + K.toString());
 }
-var D1 = 4;
-var D2 = 5;
-console.log(parseInt(AddLeftDigit(D1, 3431)));
-console.log(parseInt(AddLeftDigit(D2, AddLeftDigit(D1, 3431))));
+var K = 3431,
+   D1 = 4,
+   D2 = 5;
+console.log(parseInt(AddLeftDigit(D1, K)));
+console.log(parseInt(AddLeftDigit(D2, AddLeftDigit(D1, K))));
 
 </script>
